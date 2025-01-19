@@ -19,6 +19,21 @@ export const unit = createSlice({
     getList(state, {payload}: PayloadAction<TUnit[]>) {
       return {...state, ...normalizeUnit(payload)};
     },
+    update(
+      state,
+      {
+        payload,
+      }: PayloadAction<{
+        id: string;
+        isHover: boolean;
+        isSelect: boolean;
+      }>
+    ) {
+      state.data[payload.id] = {
+        ...state.data[payload.id],
+        ...payload,
+      };
+    },
   },
 });
 

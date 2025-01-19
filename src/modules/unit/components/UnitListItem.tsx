@@ -1,9 +1,9 @@
 import React from 'react';
 
 type Props = {
-  id: string;
+  unitId: string;
 };
 
-export const UnitListItem = ({id}: Props) => {
-  return <div>{id}</div>;
+export const UnitListItem = ({unitId}: Props) => {
+  return <div>{unitId}</div>;
 };

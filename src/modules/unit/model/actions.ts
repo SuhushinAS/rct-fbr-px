@@ -1,11 +1,12 @@
-import {TUnit} from 'modules/unit/model/types';
-import {unitActions} from 'modules/unit/model/reducers';
 import {useAppDispatch} from 'app/lib/hooks';
+import {getId} from 'modules/unit/model/constants';
+import {unitActions} from 'modules/unit/model/reducers';
+import {TUnit} from 'modules/unit/model/types';
 import {useEffect} from 'react';
 
-const WIDTH = 10;
-const HEIGHT = 10;
-const GAP = 5;
+const WIDTH = 3;
+const HEIGHT = 3;
+const GAP = 1;
 
 export const useUnitGetList = (rows: number, cols: number) => {
   const dispatch = useAppDispatch();
@@ -17,7 +18,7 @@ export const useUnitGetList = (rows: number, cols: number) => {
 
       return {
         height: HEIGHT,
-        id: [rowIndex, colIndex].join('_'),
+        id: getId(rowIndex, colIndex),
         isHover: false,
         isSelect: false,
         width: WIDTH,
