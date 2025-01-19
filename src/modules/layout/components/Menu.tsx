@@ -14,13 +14,7 @@ type TMenuItem = {
 
 export class Menu extends React.Component<TMenuProps> {
   static defaultProps = {
-    list: [
-      {
-        id: 'example',
-        name: 'Example',
-        path: '/example',
-      },
-    ],
+    list: [],
   };
 
   render() {
