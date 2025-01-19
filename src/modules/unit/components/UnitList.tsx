@@ -9,7 +9,7 @@ export const UnitList = () => {
   return (
     <div>
       {unitIdList.map((unitId) => (
-        <UnitListItem key={unitId} />
+        <UnitListItem id={unitId} key={unitId} />
       ))}
     </div>
   );
