@@ -4,9 +4,9 @@ import {unitActions} from 'modules/unit/model/reducers';
 import {TUnit} from 'modules/unit/model/types';
 import {useEffect} from 'react';
 
-const WIDTH = 3;
-const HEIGHT = 3;
-const GAP = 1;
+const WIDTH = 5;
+const HEIGHT = 5;
+const GAP = 2;
 
 export const useUnitGetList = (rows: number, cols: number) => {
   const dispatch = useAppDispatch();

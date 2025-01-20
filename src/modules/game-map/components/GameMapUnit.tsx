@@ -21,8 +21,6 @@ const getColor = (isHover: boolean, isSelect: boolean): ColorSource => {
   return 0xcccccc;
 };
 
-const isFastRect = () => true;
-
 export const GameMapUnit = ({unitId}: Props) => {
   const {height, isHover, isSelect, width, x, y} = useAppSelector(
     selectUnitItem(unitId)
@@ -38,5 +36,5 @@ export const GameMapUnit = ({unitId}: Props) => {
     [height, isHover, isSelect, width, x, y]
   );
 
-  return <Graphics draw={draw} isFastRect={isFastRect} />;
+  return <Graphics draw={draw} />;
 };
