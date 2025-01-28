@@ -1,11 +1,11 @@
-import React from 'react';
 import {GameMapContainer} from 'modules/game-map/components/GameMapContainer';
-import {GameMapStage} from 'modules/game-map/components/GameMapStage';
+import {GameMapStage2} from 'modules/game-map/components/GameMapStage2';
+import React from 'react';
 
 export const GameMap = () => {
   return (
     <GameMapContainer>
-      <GameMapStage />
+      <GameMapStage2 />
     </GameMapContainer>
   );
 };
