@@ -9,7 +9,6 @@
     "lodash.isequal": "^4.5.0",
     "normalize.css": "^8.0.1",
     "pixi.js": "^6.0.4",
-    "prettier": "^3.2.5",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -63,9 +62,15 @@
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-gradient-transparency-fix": "^4.0.0",
     "postcss-loader": "^8.1.0",
+    "prettier": "^3.4.2",
+    "sass": "^1.78.0",
     "style-loader": "^3.3.4",
-    "stylelint": "^13.13.1",
-    "stylelint-order": "^4.1.0",
+    "stylelint": "^16.14.0",
+    "stylelint-config-css-modules": "^4.4.0",
+    "stylelint-config-standard-scss": "^14.0.0",
+    "stylelint-order": "^6.0.4",
+    "stylelint-prettier": "^5.0.2",
+    "stylelint-scss": "^6.10.1",
     "terser-webpack-plugin": "^5.3.10",
     "typescript": "^5.3.3",
     "url-loader": "^4.1.1",
@@ -107,7 +112,7 @@
     "eslint": "eslint --fix src/**/*.{js,jsx,ts,tsx}",
     "serve": "cross-env NODE_ENV=production webpack serve --mode=production",
     "start": "cross-env NODE_ENV=development webpack serve --mode=development",
-    "stylelint": "stylelint --fix src/**/*.{css,less}"
+    "stylelint": "stylelint src/styles/1.scss"
   },
   "version": "0.0.1"
 }

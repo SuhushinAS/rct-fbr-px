@@ -1,3 +1,85 @@
 {
-  "extends": "./stylelint-config/index.json"
+  "plugins": [
+    "stylelint-order",
+    "stylelint-prettier"
+  ],
+  "extends": [
+    "stylelint-scss",
+    "stylelint-config-standard-scss",
+    "stylelint-prettier/recommended"
+  ],
+  "customSyntax": "postcss-scss",
+  "overrides": [
+    {
+      "files": [
+        "*.module.scss"
+      ],
+      "extends": [
+        "stylelint-config-css-modules"
+      ]
+    }
+  ],
+  "rules": {
+    "prettier/prettier": true,
+    "no-duplicate-selectors": true,
+    "length-zero-no-unit": true,
+    "block-no-empty": true,
+    "at-rule-no-unknown": null,
+    "order/order": [
+      "custom-properties",
+      "dollar-variables",
+      "at-variables",
+      "declarations",
+      "rules"
+    ],
+    "selector-class-pattern": null,
+    "scss/at-import-no-partial-leading-underscore": null,
+    "scss/at-mixin-pattern": null,
+    "scss/at-mixin-argumentless-call-parentheses": "never",
+    "scss/dollar-variable-empty-line-before": null,
+    "scss/dollar-variable-pattern": null,
+    "at-rule-no-vendor-prefix": true,
+    "color-named": "never",
+    "declaration-block-no-redundant-longhand-properties": true,
+    "declaration-no-important": null,
+    "font-family-no-missing-generic-family-keyword": null,
+    "function-url-quotes": "always",
+    "max-nesting-depth": 10,
+    "media-feature-name-no-vendor-prefix": true,
+    "no-descending-specificity": null,
+    "no-duplicate-at-import-rules": null,
+    "number-max-precision": 2,
+    "order/properties-alphabetical-order": true,
+    "property-no-vendor-prefix": true,
+    "selector-attribute-quotes": "always",
+    "selector-no-vendor-prefix": true,
+    "selector-pseudo-class-no-unknown": [
+      true,
+      {
+        "ignorePseudoClasses": [
+          "global",
+          "export",
+          "import",
+          "local"
+        ]
+      }
+    ],
+    "selector-pseudo-element-no-unknown": [
+      true,
+      {
+        "ignorePseudoElements": [
+          "global",
+          "export",
+          "import",
+          "local",
+          "input-placeholder"
+        ]
+      }
+    ],
+    "shorthand-property-no-redundant-values": true,
+    "unit-disallowed-list": [
+      "pt"
+    ],
+    "value-no-vendor-prefix": true
+  }
 }
